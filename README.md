@@ -7,7 +7,7 @@ This tool is still in writing.
 # How to use
 ## run script
 ```
-
+python main.py
 ```
 
 # Disclaimer
