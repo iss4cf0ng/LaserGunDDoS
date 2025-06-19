@@ -52,31 +52,7 @@ class Module:
         return True
 
     def interactive(self):
-        while True:
-            try:
-                cmd = input('udp_flood/> ').lower().split(' ')
-                if len(cmd) == 0:
-                    continue
-
-                if is_quit(cmd[0]):
-                    break
-
-                if cmd[0] == 'show':
-                    show_config(self.config)
-                elif cmd[0] == 'set':
-                    if len(cmd) < 3:
-                        cp.pf_failed('Usage: set key value')
-                        continue
-
-                    self.config = set_value(self.config, cmd[1], ','.join(cmd[2:]))
-                elif cmd[0] == 'help':
-                    print(self.help)
-                elif cmd[0] == 'run':
-                    if self.validate():
-                        self.run()
-
-            except KeyboardInterrupt as ex:
-                cp.pf_failed(str(ex))
+        interactive(self, 'udp_flood')
 
     def run(self):
         def send_udp(ip: str, port: int):

@@ -107,12 +107,12 @@ def show_option(config: dict, szName: str):
     print(f'\n{tabulate(lsRow, headers=lsCol)}\n')
 
 def set_value(config: dict, szKey: str, szVal: str) -> dict:
-    szKey = check_key(config, szKey)
-    if not szKey:
+    szValidKey = check_key(config, szKey)
+    if not szValidKey:
         cp.pf_failed('Cannot find key: ' + szKey)
         return
     
-    config[szKey]['value'] = szVal
+    config[szValidKey]['value'] = szVal
         
     return config
 

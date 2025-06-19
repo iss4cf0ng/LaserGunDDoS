@@ -100,7 +100,9 @@ class Module:
 
             elif mode == MODE_TIME:
                 nSecond = int(get_value(self.config, 'Time'))
-                total = doWorkWithSeconds(send_syn, nSecond, {'ip': ip, 'port': port})
+                for host in lsHost:
+                    ip, port = host
+                    total = doWorkWithSeconds(send_syn, nSecond, {'ip': ip, 'port': port})
 
             cp.pf_ok(f'Done, total={total}')
 
