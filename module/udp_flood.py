@@ -39,7 +39,7 @@ class Module:
             }
         }
 
-        self.help = ''
+        self.help = 'UDP flooding, send UDP packets with fake IP address.'
 
     def validate(self) -> bool:
         if not self.config['IP']['value'] or self.config['IP']['value'].replace(' ', '') == '':

@@ -48,9 +48,9 @@ class Module:
             },
             'Mode': {
                 'value': '0',
-                'help': 'Flooding mode.',
+                'help': 'Mode of obtain targets.',
                 'option': {
-                    TARGET_SPECIFIED: 'Do slowloris to specified targets.',
+                    TARGET_SPECIFIED: 'Do HTTP GET to specified targets.',
                     TARGET_FILE: 'Obtain targets from specified file.'
                 }
             },

@@ -1,8 +1,13 @@
 # LaserGunDDoS
 A modularized toolkit of DoS/DDoS/Stress test. You can also implement your own tools.
 
-# Warnign
+# Warning
 This tool is still in writing.
+
+# Todo
+- Amplification attack
+- Proxy
+- Botnet
 
 # How to use
 ## run script
