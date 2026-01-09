@@ -9,7 +9,7 @@ class Module:
         self.config = {
             'IP': {
                 'value': '',
-                'help': '',
+                'help': 'Target IPv4 address.',
             },
             'Ports': {
 

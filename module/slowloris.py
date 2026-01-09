@@ -1,5 +1,6 @@
 '''
 Acknowledgement:
+https://github.com/gkbrk/slowloris/blob/master/slowloris.py
 
 '''
 

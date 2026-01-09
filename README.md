@@ -18,7 +18,16 @@ This tool is still in developing.
 # How to use
 ## run script
 ```
-python main.py
+python main.py "Wi-Fi"
+```
+Here "Wi-Fi" is you network interface name. You can find out your interface with the following commands:  
+**Linux**:
+```
+ifconfig
+```
+**Windows**:
+```
+ipconfig
 ```
 
 # Disclaimer
