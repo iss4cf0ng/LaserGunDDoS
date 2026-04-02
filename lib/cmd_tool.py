@@ -34,7 +34,7 @@ def interactive(self, prompt=''):
 
                 self.config = set_value(self.config, cmd[1], ','.join(cmd[2:]))
             elif cmd[0] == 'help':
-                print(self.help)
+                print(f'\n{self.help}\n')
             elif cmd[0] == 'run':
                 if self.validate():
                     self.run()
@@ -89,13 +89,14 @@ def check_key(config: dict, szName: str) -> str:
     return None
 
 def show_option(config: dict, szName: str):
+    tmpName = szName
     szName = check_key(config, szName)
 
     if not szName:
-        cp.pf_failed('Cannot find field: ' + szName)
+        cp.pf_failed('Cannot find field: ' + tmpName)
         return
     
-    if 'option' not in config[szName]:
+    if 'options' not in config[szName]:
         show_val(config, szName)
         return
 

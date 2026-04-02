@@ -78,7 +78,7 @@ class Module:
             }
         }
 
-        self.help = ''
+        self.help = 'Slowloris attack script.'
         self.lsSocket = []
 
         setattr(socket.socket, 'send_line', send_line)

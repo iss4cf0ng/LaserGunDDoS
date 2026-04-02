@@ -20,16 +20,15 @@ You can implement your own tool and put into ./module
 '''
 
 def main():
-    try:
-        iface = sys.argv[1]
-        print(iface)
-        conf.iface = 'Wi-Fi'
+    if len(sys.argv) < 2:
+        print('Usage: python3 main.py <Interface name>')
+        exit(1)
 
-        print(intro)
-        interactive.do_interactive()
-    
-    except Exception as ex:
-        print(str(ex))
+    iface = sys.argv[1]
+    conf.iface = iface
+
+    print(intro)
+    interactive.do_interactive()
 
 if __name__ == '__main__':
     main()
